@@ -1,0 +1,149 @@
+.auth-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar Styles */
+.navbarhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 9px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 50px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default, will show on mobile */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  padding: 7px 15px; /* Adjust padding for a better clickable area */
+  margin: 0 5px; /* Space between links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Active tab style */
+.nav-links li.active {
+  font-weight: bold;
+  color: #ffffff; /* Change text color for better contrast */
+  background-color: #3498db; /* Background color for active tab */
+}
+
+/* Hover effect */
+.nav-links li:hover {
+  background-color: rgba(
+    52,
+    152,
+    219,
+    0.2
+  ); /* Lighten the active color on hover */
+  color: #3498db; /* Change text color on hover */
+}
+
+/* Optional: Add focus styles for accessibility */
+.nav-links li:focus {
+  outline: 2px solid #3498db; /* Outline for keyboard navigation */
+  outline-offset: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show menu toggle button on mobile */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    display: flex; 
+  }
+}
+
+/* Error Handling */
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+/* Main Content Styles */
+main {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: #e8edfd;
+}
